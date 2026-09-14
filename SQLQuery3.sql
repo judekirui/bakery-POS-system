@@ -1,9 +1,3 @@
-ALTER TABLE dbo.Customer NOCHECK CONSTRAINT fk_customer_order;
-ALTER TABLE dbo.Employees NOCHECK CONSTRAINT fk_employees_order;
-ALTER TABLE dbo.Payments NOCHECK CONSTRAINT fk_payments_order;
-ALTER TABLE dbo.Ingredient NOCHECK CONSTRAINT fk_ingredient_purchitem;
-ALTER TABLE dbo.Purchase_Items NOCHECK CONSTRAINT fk_purchitems_purchase;
-ALTER TABLE dbo.Purchases NOCHECK CONSTRAINT fk_purchases_supplier;
  
 INSERT INTO Supplier (Supplier_ID, Purchase_ID, Name, Email, Address) VALUES
 (1, 1, 'Highland Flour Mills', 'orders@highlandflour.co.ke', 'Nakuru, Kenya'),
@@ -81,9 +75,3 @@ INSERT INTO Order_Items (Order_ID, Item_ID, Quantity) VALUES
 (4, 6, 1), -- Ian: 1x Custom Birthday Cake
 (5, 5, 2); -- Joyce: 2x Cinnamon Roll
  
-ALTER TABLE dbo.Customer WITH CHECK CHECK CONSTRAINT fk_customer_order;
-ALTER TABLE dbo.Employees WITH CHECK CHECK CONSTRAINT fk_employees_order;
-ALTER TABLE dbo.Payments WITH CHECK CHECK CONSTRAINT fk_payments_order;
-ALTER TABLE dbo.Ingredient WITH CHECK CHECK CONSTRAINT fk_ingredient_purchitem;
-ALTER TABLE dbo.Purchase_Items WITH CHECK CHECK CONSTRAINT fk_purchitems_purchase;
-ALTER TABLE dbo.Purchases WITH CHECK CHECK CONSTRAINT fk_purchases_supplier;
